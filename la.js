@@ -170,7 +170,7 @@ const receitas = {
     smoothie: {
         titulo: "Smoothie de Banana",
         ingredientes: [
-            "1 banana cobelada",
+            "1 banana congelada",
             "200ml de leite",
             "1 colher de sopa de mel"
         ],
@@ -314,3 +314,4 @@ function initHamburgerMenu() {
         });
     }
 }
+
