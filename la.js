@@ -35,6 +35,7 @@ if (typeof initQuiz === 'function') {
 }
 initContactForm();
 initRecipeModals();
+initHamburgerMenu();
 });
 
 // Theme toggle disabled as per user request
@@ -291,3 +292,25 @@ function animateOnScroll() {
 
 // Inicializar animações quando a página carregar
 window.addEventListener('load', animateOnScroll);
+
+// Hamburger menu
+function initHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('nav-active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('nav-active');
+                hamburger.classList.remove('active');
+            });
+        });
+    }
+}

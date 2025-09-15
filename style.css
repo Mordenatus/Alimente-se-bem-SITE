@@ -99,6 +99,24 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
 .theme-toggle {
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -535,18 +553,52 @@ footer {
         text-align: center;
         gap: 1rem;
     }
-    
+
     header h1 {
         font-size: 2rem;
     }
-    
-    nav ul {
-        flex-direction: column;
-        gap: 5px388e3c;
+
+    nav {
+        position: relative;
     }
-    
+
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        box-shadow: var(--shadow);
+    }
+
+    nav ul.nav-active {
+        display: flex;
+    }
+
     nav ul li a {
         justify-content: center;
+        padding: 1rem;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
     
     section {
