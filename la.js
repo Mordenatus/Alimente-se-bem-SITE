@@ -155,7 +155,7 @@ const receitas = {
                 "2 colheres de sopa de cebola picada",
                 "1 colher de sopa de cheiro-verde ou orégano (opcional)",
                 "Sal e pimenta a gosto",
-                "1 colher de chá de óleo ou azeiteno lugar"
+                "1 colher de chá de óleo ou azeite no lugar"
 
             ],
             preparo: [
@@ -314,4 +314,5 @@ function initHamburgerMenu() {
         });
     }
 }
+
 
